@@ -12,7 +12,7 @@
         -ms-overflow-style: none;
         background-color: #574e7c;
         top: 10%;
-        position: relative;
+        padding-left: 5px;
     }
     .poke-info::-webkit-scrollbar{
         width: 0;
@@ -47,6 +47,7 @@
         scrollbar-width: none;
         -ms-overflow-style: none;
         top: 5%;
+        text-align: center;
     }
     .poke-info::-webkit-scrollbar{
         width: 0;
@@ -66,4 +67,66 @@
         width: 96px;
         height: 96px;
     }
+    #stats {
+        position: relative;
+    }
+}
+
+
+/**
+ Colores de los tipos de pokemon
+ */
+#normal {
+    background-color: #aaaa99;
+}
+#fire {
+    background-color: #ff4422;
+}
+#water {
+    background-color: #3399ff;
+}
+#electric {
+    background-color: #ffcc33;
+}
+#grass {
+    background-color: #77cc55;
+}
+#ice {
+    background-color: #66ccff;
+}
+#fighting {
+    background-color: #bb5544;
+}
+#poison {
+    background-color: #aa5599;
+}
+#ground {
+    background-color: #ddbb55;
+}
+#flying {
+    background-color: #8899ff;
+}
+#psychic {
+    background-color: #ff5599;
+}
+#bug {
+    background-color: #aabb22;
+}
+#rock {
+    background-color: #bbaa66;
+}
+#ghost {
+    background-color: #6666bb;
+}
+#dragon {
+    background-color: #7766ee;
+}
+#dark {
+    background-color: #775544;
+}
+#steel {
+    background-color: #aaaabb;
+}
+#fairy {
+    background-color: #ee99ee;
 }
