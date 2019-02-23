@@ -38,7 +38,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=50")
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=100")
         .then((response) => response.json())
         .then(data => {
             // eslint-disable-next-line

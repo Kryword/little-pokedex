@@ -12,8 +12,8 @@ class PokeInfo extends Component {
                 <img src={this.props.pokemon.sprites.front_default} alt={this.props.pokemon.name} onMouseEnter={this.handleOnMouseEnter} onMouseLeave={this.handleOnMouseLeave}/>
                 <ul>
                     <li key="nombre">Nombre: {this.props.pokemon.name}</li>
-                    <li key="altura">Altura: {this.props.pokemon.height}</li>
-                    <li key="peso">Peso: {this.props.pokemon.weight}</li>
+                    <li key="altura">Altura: {this.props.pokemon.height/10}m</li>
+                    <li key="peso">Peso: {this.props.pokemon.weight/10}kg</li>
                     <li key="tipo">Tipo:
                         {this.props.pokemon.types.map((element) => {
                             return <span key={element.type.name} className="badge badge-info m-2">{element.type.name}</span>
@@ -22,7 +22,7 @@ class PokeInfo extends Component {
                     <li key="stats">Stats:
                         <ul>
                             {this.props.pokemon.stats.map((stat) => {
-                                return <li key={stat.stat.name}>{stat.stat.name}: {stat.base_stat}</li>
+                                return <li key={stat.stat.name}>{stat.stat.name}: <span key={stat.stat.name + "span"} className="badge badge-pill badge-secondary">{stat.base_stat}</span></li>
                             })}
                         </ul>
                     </li>
