@@ -1,0 +1,14 @@
+.poke-info {
+    -webkit-border-radius: 1%;
+    -moz-border-radius: 1%;
+    border-radius: 1%;
+    width: 20%;
+    height: 80%;
+    position: relative;
+    margin-left: 5%;
+    background-color: #574e7c;
+}
+
+.poke-info ul {
+    list-style-type: none;
+}
