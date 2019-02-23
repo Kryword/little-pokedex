@@ -8,7 +8,7 @@ class App extends Component {
   state = {
       pokemons : [],
       pokemonInfo: {}
-  }
+  };
   constructor(props) {
     super(props);
     this.state = {
@@ -16,7 +16,7 @@ class App extends Component {
         pokemonInfo: {
             name: "Loading...",
             sprites: {
-                front_default: ""
+                front_default: "https://gifimage.net/wp-content/uploads/2017/08/pokeball-gif-12.gif"
             },
             id: 0,
             height: 0,
@@ -24,7 +24,7 @@ class App extends Component {
             types: [],
             stats: []
         }
-    }
+    };
     this.showInfoHandler = this.showInfoHandler.bind(this);
   }
 
@@ -44,13 +44,12 @@ class App extends Component {
             // eslint-disable-next-line
             data.results.map((pokemon, index) => {
                 pokemon.sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1}.png`;
-            })
+            });
             this.setState({pokemons: data.results})
         });
   }
 
   showInfoHandler(pokemon){
-      let sprite = pokemon.sprite;
       fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
           .then(data => data.json())
           .then((result)=>{
