@@ -27,6 +27,7 @@
     -ms-overflow-style: none;
     top: 5%;
     position: relative;
+    justify-content: space-evenly;
   }
 
   .poke-list::-webkit-scrollbar{
@@ -77,4 +78,10 @@
   .poke-list img:hover{
     background-color: rgba(61, 113, 130, 0.83);
   }
+}
+
+.infinite-scroll-component {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }

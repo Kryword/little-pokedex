@@ -12,25 +12,25 @@ class App extends Component {
     };
     limit = 0;
     constructor(props) {
-    super(props);
-    this.state = {
-        pokemons : [],
-        pokemonInfo: {
-            name: "Loading...",
-            sprites: {
-                front_default: "https://gifimage.net/wp-content/uploads/2017/08/pokeball-gif-12.gif"
+        super(props);
+        this.state = {
+            pokemons : [],
+            pokemonInfo: {
+                name: "Loading...",
+                sprites: {
+                    front_default: "https://media.giphy.com/media/qSrK4HvZyLMJi/giphy.gif"
+                },
+                id: 0,
+                height: 0,
+                weight: 0,
+                types: [],
+                stats: []
             },
-            id: 0,
-            height: 0,
-            weight: 0,
-            types: [],
-            stats: []
-        },
-        hasMore : true,
-        next: ""
-    };
-    this.showInfoHandler = this.showInfoHandler.bind(this);
-    this.fetchMoreData = this.fetchMoreData.bind(this);
+            hasMore : true,
+            next: ""
+        };
+        this.showInfoHandler = this.showInfoHandler.bind(this);
+        this.fetchMoreData = this.fetchMoreData.bind(this);
     }
 
     render() {

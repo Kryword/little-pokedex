@@ -5,7 +5,7 @@ class PokeInfo extends Component {
     render() {
         return (
             <div className="poke-info center-div">
-                <img src={this.props.pokemon.sprites.front_default} alt={this.props.pokemon.name} onMouseEnter={this.handleOnMouseEnter} onMouseLeave={this.handleOnMouseLeave}/>
+                <img src={this.props.pokemon.sprites.front_default} alt={this.props.pokemon.name}/>
                 <ul>
                     <li key="id" className="badge badge-info">#{this.props.pokemon.id}</li>
                     <li key="nombre">Nombre: {this.props.pokemon.name}</li>
