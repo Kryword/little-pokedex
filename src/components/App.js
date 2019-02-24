@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {render} from 'react-dom'
 import './App.css';
 import PokeInfo from "./PokeInfo";
 import InfiniteScroll from 'react-infinite-scroll-component'
@@ -11,7 +10,7 @@ class App extends Component {
         pokemonInfo: {},
         next: null
     };
-    limit = 0
+    limit = 0;
     constructor(props) {
     super(props);
     this.state = {
@@ -87,7 +86,7 @@ class App extends Component {
               .then((response) => response.json())
               .then(data => {
                   // eslint-disable-next-line
-                  data.results.map((pokemon, index) => {
+                  data.results.map((pokemon) => {
                       this.setState({
                           pokemons: [...this.state.pokemons, pokemon],
                           next: data.next,

@@ -2,10 +2,6 @@ import React, {Component} from 'react'
 import './PokeInfo.css'
 
 class PokeInfo extends Component {
-    constructor(props){
-        super(props);
-    }
-
     render() {
         return (
             <div className="poke-info center-div">
