@@ -56,6 +56,9 @@ class App extends Component {
 
     componentDidMount() {
         this.limit = Math.floor((this.pokeList.clientWidth/96) / 2 * this.pokeList.clientWidth/96); // Very hacky form to do it, clientHeight doesn't work accordingly
+        if (this.limit < 20){
+            this.limit = 20;
+        }
         this.fetchMoreData();
     }
 
