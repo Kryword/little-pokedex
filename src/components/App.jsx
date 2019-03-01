@@ -83,8 +83,8 @@ class App extends Component {
 
     showInfoHandler(pokemon){
         this.P.getPokemonByName(pokemon.name).then(result => {
-            result.sprites.front_gif = "http://play.pokemonshowdown.com/sprites/xyani/" + pokemon.name + ".gif";
-            result.sprites.back_gif = "http://play.pokemonshowdown.com/sprites/xyani-back/" + pokemon.name + ".gif";
+            result.sprites.front_gif = "https://play.pokemonshowdown.com/sprites/xyani/" + pokemon.name + ".gif";
+            result.sprites.back_gif = "https://play.pokemonshowdown.com/sprites/xyani-back/" + pokemon.name + ".gif";
             this.setState({
                 pokemonInfo: result,
                 selected: pokemon.id
