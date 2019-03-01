@@ -45,7 +45,9 @@ class App extends Component {
         this.showInfoHandler = this.showInfoHandler.bind(this);
         this.fetchMoreData = this.fetchMoreData.bind(this);
         var Pokedex = require('pokeapi-js-wrapper')
-        this.P = new Pokedex.Pokedex();
+        this.P = new Pokedex.Pokedex({
+            protocol: 'https'
+        });
     }
 
     render() {
