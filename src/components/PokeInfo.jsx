@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import './PokeInfo.css'
-import {Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis} from 'recharts';
+import {Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Tooltip} from 'recharts';
 
 class PokeInfo extends Component {
     render() {
@@ -30,8 +30,10 @@ class PokeInfo extends Component {
                     data={this.props.pokemon.statsData}>
                     <PolarGrid/>
                     <PolarAngleAxis dataKey="subject" tick={{fill: '#fff'}}/>
-                    <PolarRadiusAxis/>
+                    <PolarRadiusAxis angle={30} domain={[0, 200]}/>
                     <Radar name={"Pokemon"} dataKey="A" stroke="#000000" fill="#aaff00" fillOpacity={0.8}/>
+                    <Tooltip formatter={(value, name, props) => {
+                        return [value, props.payload.subject]}} />
                 </RadarChart>}
             </div>
         );
