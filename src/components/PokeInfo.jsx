@@ -5,9 +5,9 @@ class PokeInfo extends Component {
     render() {
         return (
             <div className="poke-info center-div">
-                <img src={"http://play.pokemonshowdown.com/sprites/xyani/" + this.props.pokemon.name + ".gif"} alt={this.props.pokemon.name}
-                    onMouseOver={e => (e.currentTarget.src = "http://play.pokemonshowdown.com/sprites/xyani-back/" + this.props.pokemon.name + ".gif")}
-                     onMouseOut={e => (e.currentTarget.src = "http://play.pokemonshowdown.com/sprites/xyani/" + this.props.pokemon.name + ".gif")}
+                <img src={this.props.pokemon.sprites.front_gif} alt={this.props.pokemon.name}
+                    onMouseOver={e => (e.currentTarget.src = this.props.pokemon.sprites.back_gif)}
+                     onMouseOut={e => (e.currentTarget.src = this.props.pokemon.sprites.front_gif)}
                 />
                 <ul>
                     <li key="id" className="badge badge-info">#{this.props.pokemon.id}</li>

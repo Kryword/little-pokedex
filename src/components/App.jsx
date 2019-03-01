@@ -10,7 +10,8 @@ class App extends Component {
         pokemonInfo: {
             name: "Loading...",
             sprites: {
-                front_default: "https://media.giphy.com/media/qSrK4HvZyLMJi/giphy.gif"
+                front_gif: "https://media.giphy.com/media/qSrK4HvZyLMJi/giphy.gif",
+                back_gif: "https://media.giphy.com/media/qSrK4HvZyLMJi/giphy.gif"
             },
             id: 0,
             height: 0,
@@ -31,7 +32,8 @@ class App extends Component {
             pokemonInfo: {
                 name: "Loading...",
                 sprites: {
-                    front_default: "https://media.giphy.com/media/qSrK4HvZyLMJi/giphy.gif"
+                    front_gif: "https://media.giphy.com/media/qSrK4HvZyLMJi/giphy.gif",
+                    back_gif: "https://media.giphy.com/media/qSrK4HvZyLMJi/giphy.gif"
                 },
                 id: 0,
                 height: 0,
@@ -81,6 +83,8 @@ class App extends Component {
 
     showInfoHandler(pokemon){
         this.P.getPokemonByName(pokemon.name).then(result => {
+            result.sprites.front_gif = "http://play.pokemonshowdown.com/sprites/xyani/" + pokemon.name + ".gif";
+            result.sprites.back_gif = "http://play.pokemonshowdown.com/sprites/xyani-back/" + pokemon.name + ".gif";
             this.setState({
                 pokemonInfo: result,
                 selected: pokemon.id
